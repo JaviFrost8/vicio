@@ -1,9 +1,9 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Game } from './pages/Game';
 import { Ayuda } from './pages/Ayuda';
 import { Navbar } from './components/Navbar';
+import { GameFlow } from './pages/GameFlow';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
     <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/game' element={<Game />} />
+        <Route path='/game' element={<GameFlow />} />
         <Route path='/help' element={<Ayuda />} />
       </Routes>
     </BrowserRouter>
