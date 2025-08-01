@@ -8,7 +8,7 @@ export function GameProvider({ children }){
   const [score, setScore] = useState(0);
 
   return(
-    <GameContext.Provider>
+    <GameContext.Provider value={{}}>
       { children }
     </GameContext.Provider>
   )

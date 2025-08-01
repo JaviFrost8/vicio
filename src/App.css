@@ -14,6 +14,7 @@ body{
 }
 
 nav{
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +22,7 @@ nav{
   width: 100%;
   height: 4rem;
   background: linear-gradient(90deg, var(--fourth-color), var(--fifth-color), var(--fourth-color));
+  z-index: 1;
 }
 
 ul{
@@ -115,12 +117,12 @@ a{
   flex-direction: column;
   background-color: rgb(248, 248, 139);
   padding: 40px;
+  margin-top: 200px;
   width: 50%;
 }
 
 .warning h2{
   font-size: 40px;
-  margin-bottom: 20px;
 }
 
 .warning p{
@@ -148,62 +150,124 @@ a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
-  margin: 100px auto;
+  width: 100%;
+  margin: 30px auto;
 }
 
 .description-container{
   display: flex;
   align-items: center;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  animation: intro 2s ease;
+  background-color: var(--thirst-color);
+  width: 100%;
+  min-height: 100vh;
+  animation: description 2s ease;
 }
 
-@keyframes intro{
-  from { opacity: 0 }
-  to { opacity: 1}
+@keyframes description{
+  from {opacity: 0}
+  to {opacity: 1}
 }
 
 .description{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  color: white;
+  margin: 150px 50px 50px 50px;
+  width: 70%;
 }
 
-.photo-description img{
-  border-radius: 15px;
-}
-
-.text-description{
-  margin-left: 20px;
-  line-height: 40px;
-  font-size: 25px;
+.photo-description{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 40px;
   width: 40%;
 }
 
-.text-description p{
-  text-align: center;
+.photo-description img{
+  box-shadow: 0 0 20px var(--fifth-color);
+  border-radius: 20px;
+  transition: all 1s ease;
 }
 
-.text-description p:first-child{
-  font-size: 40px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #b91819;
+.photo-description img:hover{
+  transform: scale(1.04);
 }
 
-.drug-container{
+.text-description{
+  width: 60%;
+  font-size: 23px;
+}
+
+.drugs-container{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
 }
 
-.drugs{
-  display: flex;
-  gap: 10px;
+.destroy-text{
+  color: #e20101;
+  margin: 15px 0;
 }
+
+.btn-drug{
+  background: linear-gradient(145deg, #2d2d2d, #1c1c1c);
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-drug:hover{
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #e20101, #810000);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.game-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--thirst-color);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.welcome-drug-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  animation: description 1s ease;
+}
+
+.title-drug{
+  margin: 100px 0 30px 0;
+  color: #e20101;
+  text-shadow: 1px 1px 2px #1c1c1c;
+}
+
+.intro-drug{
+  font-size: 22px;
+  color: white;
+  width: 600px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.photo-drug{
+  width: 450px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+

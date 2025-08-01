@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { WarningScreen } from '../components/WarningScreen';
 import { SelectionDrug } from '../components/SelectionDrug';
 import { Game } from '../components/Game';
+import { BackgroundAudio } from '../components/BackgroundAudio';
 
 export const GameFlow = () => {
 
@@ -19,8 +20,12 @@ export const GameFlow = () => {
         />
         
       ) : (
-        <Game drug={drugSelected} />
+        <>
+          <Game drug={drugSelected} />
+        </>
       )}
+
+      <BackgroundAudio />
     </div>
   )
 }

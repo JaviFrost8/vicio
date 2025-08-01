@@ -1,6 +1,9 @@
 export const scenes = [
   {
-    Alcohol: [
+    drug: 'Alcohol',
+    photo: '../../public/images/drogas/alcohol.jpg',
+    intro: 'Una copa para celebrar. Risas, música, amigos. Te sientes libre, valiente, invencible. Todo fluye, todo brilla un poco más. Por un momento el mundo es perfecto.',
+    scenesArray: [
       {
         id: 0,
         text: 'Estás en una fiesta, te invitan a una copa...',
@@ -44,7 +47,12 @@ export const scenes = [
         isFinal: true
       }
     ],
-    Cocaína: [
+  },
+  { 
+    drug: 'Cocaína',
+    photo: '../../public/images/drogas/cocaina.jpg',
+    intro: 'Una línea. Y de pronto... todo va más rápido. Energía al máximo. Confianza, poder, euforia. Te sientes imparable. Como si nada pudiera tocarte.',
+    scenesArray: [
       {
         id: 0,
         text: 'Estás en la feria de tu ciudad con dos amigos. Uno se hace tres rayas. Los dos consumen, faltas tú.',
@@ -104,5 +112,47 @@ export const scenes = [
         isFinal: true
       }
     ]
+  },
+  {
+    drug: 'Crack',
+    photo: '../../public/images/drogas/crack.jpg',
+    intro: 'Una calada... y estalla la mente. El placer es instantáneo, intenso, brutal. Por unos segundos no existe el dolor. Solo tu y esa sensación que lo eclipsa todo. Pura euforia.',
+    scenes: []
+  },
+  {
+    drug: 'GHB',
+    photo: '../../public/images/drogas/ghb.jpg',
+    intro: 'Una dosis y todo se vuelve ligero. Ríes sin motivo, bailas sin miedo. El mundo vibra, el cuerpo se suelta. Sensaciones intensas, caricias más vivas. Todo es placer...sin frenos.',
+    scenes: []
+  },
+  {
+    drug: 'Heroína',
+    photo: '../../public/images/drogas/heroina.webp',
+    intro: 'La aguja entra... y todo desaparece. Calor, paz, silencio. Como volver al útero. Ningún problema importa. Solo una calma perfecta... que lo envuelve todo.',
+    scenes: []
+  },
+  {
+    drug: 'Ketamina',
+    photo: '../../public/images/drogas/ketamina.webp',
+    intro: 'Un viaje sin peso. La realidad se dobla, se estira, se disuelve. Flotas en otra dimensión. Lejos del dolor, lejos del cuerpo. Solo queda el asombro... y el vacío tranquilo.',
+    scenes: []
+  },
+  {
+    drug: 'Metanfetamina',
+    photo: '../../public/images/drogas/metanfetamina.webp',
+    intro: 'Una chispa... y todo se enciende. Energía desbordante, energía pura. Horas sin cansancio, sin hambre, sin miedo. La mente corre, el cuerpo responde. Te sientes afilado, invencible... brillante.',
+    scenes: []
+  },
+  {
+    drug: 'Fentanilo',
+    photo: '../../public/images/drogas/fentanilo.jpg',
+    intro: 'Solo un pequeño toque... y todo se vuelve suave, cálido, lejano. El cuerpo flota, la mente se rinde. No hay dolor, no hay peso. Solo calma... profunda y total.',
+    scenes: []
+  },
+  {
+    drug: 'Krokodil',
+    photo: '../../public/images/drogas/krokodil.jpg',
+    intro: 'Al principio... es como la heroína. Un chute de paz absoluta. El cuerpo se relaja, la mente se apaga. Nada duele, nada importa. Solo queda una sensación intensa... y dulce.',
+    scenes: []
   }
 ]
