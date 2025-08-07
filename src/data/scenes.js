@@ -6,44 +6,99 @@ export const scenes = [
     scenesArray: [
       {
         id: 0,
-        text: 'Estás en una fiesta, te invitan a una copa...',
+        text: 'Estás en una fiesta. Todo el mundo bebe. Alguien te ofrece una copa con una sonrisa.',
         choices: [
-          { text: 'Aceptar la copa', impact: +15, next: 1 },
-          { text: 'Rechazar amablemente', impact: 0, next: 5 }
+          { text: 'Aceptar la copa', impact: +10, next: 1 },
+          { text: 'Rechazar, no necesitas beber para divertirte.', impact: 0, next: 10 }
         ]
       },
       {
         id: 1,
-        text: 'Sientes el efecto. Estás mas desinhibido y con ganas de seguir bebiendo.',
+        text: 'Empiezas a notar el efecto. Te sientes más suelto, más valiente.',
         choices: [
-          { text: 'Tomas unas cuantas más', impact: +25, next: 2 },
-          { text: 'Te detienes y tomas agua', impact: -5, next: 2}
+          { text: 'Sigues tomando, te gusta la sensación', impact: +15, next: 2 },
+          { text: 'Ya has tenido suficiente', impact: 0, next: 11 }
         ]
       },
       {
         id: 2,
-        text: 'Pasa el tiempo y ahora bebes diariamente, te gusta la sensación que te produce.',
+        text: 'Pasas a la universidad. Conoces nuevos amigos, fiestas, litros, chupitos... El alcohol está en cada celebración.',
         choices: [
-          { text: 'Sigues bebiendo sin restricciones.', impact: +30, next: 3 },
-          { text: 'Quieres intentar dejar el acohol.', impact: -5, next: 3 }
+          { text: 'Sigues bebiendo más a menudo.', impact: +20, next: 3 },
+          { text: 'Bebes solo en eventos', impact: +5, next: 11 }
         ]
       },
       {
         id: 3,
-        text: 'No puedes probarlo, con dar un solo trago ya no puedes parar. El acohol se vuelve algo normal en tu día a día.',
+        text: 'Te has desmayado dos veces por beber demasiado. Una vez perdiste el móvil, otra acabaste en urgencias.',
         choices: [
-          { text: 'No pasa nada, estás a gusto así, sigues tomando.', impact: +40, next: 4 },
-          { text: 'Decides limitar tu consumo', impact: -10, next: 4 }
+          { text: 'Hacer bromas sobre eso', impact: +15, next: 4 },
+          { text: 'Preocuparte, has aprendido la lección.', impact: 0, next: 12 }
         ]
       },
       {
         id: 4,
-        text: 'Tu experiencia con el acohol tendrá consecuencias visibles.',
+        text: 'Empiezas a beber también en casa, viendo partidos, solo. Te ayuda a “relajarte”. Empieza a ser una costumbre.',
+        choices: [
+          { text: 'Bebes cada noche', impact: +25, next: 5 },
+          { text: 'El acohol te está trayendo problemas, lo dejas', impact: +5, next: 12}
+        ]
+      },
+      {
+        id: 5,
+        text: 'Tu pareja se queja: “No eres el mismo cuando bebes”. Pero tú piensas que exagera. Discutís cada vez más.',
+        choices: [
+          { text: 'Bebes para no discutir', impact: +20, next: 6 },
+          { text: 'Tiene razón, decides dejarlo', impact: +5, next: 12}
+        ]
+      },
+      {
+        id: 6,
+        text: 'Han pasado años. Has perdido tu relación. Tus amigos ya no te llaman. Borras recuerdos en cada resaca. La resaca es tu mejor amiga.',
+        choices: [
+          { text: 'Aceptar que estás solo, bebes', impact: +20, next: 7 },
+          { text: 'Decides buscar ayuda profesional', impact: +5, next: 13 }
+        ]
+      },
+      {
+        id: 7,
+        text: 'Estás desempleado. Has llegado borracho a entrevistas. Tu aspecto físico ha cambiado, tienes la cara hinchada, los ojos apagados.',
+        choices: [
+          { text: 'Sigues bebiendo para evadirte', impact: +20, next: 8 },
+          { text: 'Buscas cualquier ayuda, solo quieres dejarlo', impact: +5, next: 13 }
+        ]
+      },
+      {
+        id: 8,
+        text: 'Tu salud empeora. Tienes problemas hepáticos. El médico te advierte: “Si sigues bebiendo, no llegarás a viejo.”',
+        choices: [
+          { text: 'Ignorarlo, ya estás roto', impact: +20, next: 9 },
+          { text: 'Tiene razón, debo dejarlo y lo haré.', impact: -5, next: 13}
+        ]
+      },
+      {
+        id: 9,
+        text: 'Has llegado hasta el límite. Tu aspecto es deplorable. Lo has perdido todo por el alcohol. Ya no te queda nada, solo un aspecto que da pena.',
         isFinal: true
       },
       {
-        id: 5, 
-        text: 'Rechazaste la mayoría de las veces. Bebes ocasionalmente, pero siempre con control. Nada preocupante. Has sabido marcar tus límites.',
+        id: 10,
+        text: 'No necesitas alcohol para divertirte y es una muy buena elección. Prefieres estar con tus 5 sentidos siempre activos. ¡Enhorabuena!',
+        isFinal: true
+      },
+      {
+        id: 11,
+        text: 'Ya has tenido suficiente, sabes que un par de copas son suficientes, no quieres pasarlo mal. Buena elección.',
+        isFinal: true
+      },
+      {
+        id: 12,
+        text: 'Decides poner tu vida de nuevo en orden. No quieres ser un borracho, no quieres perderlo todo por la bebida.',
+        isFinal: true
+      },
+      {
+        id: 13,
+        text: 'Te has refugiado de los problemas en el alcohol y eso es una mala elección. No pareces el mismo, estás destrozado.',
         isFinal: true
       }
     ],
@@ -214,6 +269,7 @@ export const scenes = [
     photo: '../../public/images/drogas/ghb.jpg',
     intro: 'Una dosis y todo se vuelve ligero. Ríes sin motivo, bailas sin miedo. El mundo vibra, el cuerpo se suelta. Sensaciones intensas, caricias más vivas. Todo es placer...sin frenos.',
     scenesArray: []
+    //FALTA AQUI TODA LA INFORMACIÓN Y LAS ESCENAS DEL GHB
   },
   {
     drug: 'Heroína',
@@ -311,6 +367,7 @@ export const scenes = [
     photo: '../../public/images/drogas/ketamina.webp',
     intro: 'Un viaje sin peso. La realidad se dobla, se estira, se disuelve. Flotas en otra dimensión. Lejos del dolor, lejos del cuerpo. Solo queda el asombro... y el vacío tranquilo.',
     scenesArray: []
+    //FALTA AQUI TODA LA INFORMACIÓN Y LAS ESCENAS DE LA KETAMINA
   },
   {
     drug: 'Metanfetamina',
@@ -394,12 +451,187 @@ export const scenes = [
     drug: 'Fentanilo',
     photo: '../../public/images/drogas/fentanilo.jpg',
     intro: 'Solo un pequeño toque... y todo se vuelve suave, cálido, lejano. El cuerpo flota, la mente se rinde. No hay dolor, no hay peso. Solo calma... profunda y total.',
-    scenesArray: []
+    scenesArray: [
+      {
+        id: 0,
+        text: 'Te ofrecen una pastilla en una fiesta. Te dicen que es "algo suave para relajarte, rollo oxy". Pero lleva fentanilo.',
+        choices: [
+          { text: 'Tomarla sin pensarlo', impact: +20, next: 1 },
+          { text: 'Rechazarla con desconfianza', impact: 0, next: 9}
+        ]
+      },
+      {
+        id: 1,
+        text: 'En pocos minutos te sientes flotando. Tu cuerpo se hunde en el sofá. Todo parece lejano. Pero tu respiración empieza a volverse lenta.',
+        choices: [
+          { text: 'Tomar otra más para mantener el efecto', impact: +15, next: 2 },
+          { text: 'Dormir un poco para descansar', impact: +5, next: 9}
+        ]
+      },
+      {
+        id: 2,
+        text: 'Te despiertas en el suelo, alguien te reanimó con naloxona (medicamento contra sobredosis). Estuviste a punto de morir, te cuesta pensar con claridad.',
+        choices: [
+          { text: 'Ignorar lo ocurrido y probar de nuevo', impact: +20, next: 3 },
+          { text: 'Intentar dejarlo por miedo', impact: +10, next: 10 }
+        ]
+      },
+      {
+        id: 3,
+        text: 'Intentas dejarlo pero el dolor físico es insoportable. Tu cuerpo lo pide a gritos. Sientes calambres y fríos.',
+        choices: [
+          { text: 'Consumir para aliviar síntomas', impact: +20, next: 4 },
+          { text: 'Ir a urgencias', impact: -10, next: 10 }
+        ]
+      },
+      {
+        id: 4,
+        text: 'Ahora lo necesitas cada pocas horas. Ya no es placer, es necesidad. Todo tu día gira en torno a conseguir más.',
+        choices: [
+          { text: 'Buscar nuevos proveedores', impact: +20, next: 5 },
+          { text: 'Pedir ayuda a un familiar', impact: -5, next: 11}
+        ]
+      },
+      {
+        id: 5,
+        text: 'Te venden una bolsita en mal estado. Te la inyectas. Tu visión se nubla, tu cuerpo cae al suelo. Silencio.',
+        choices: [
+          { text: 'Seguir consumiendo a pesar del riesgo', impact: +25, next: 6 },
+          { text: 'Tirar todo y huir', impact: +5, next: 11 }
+        ]
+      },
+      {
+        id: 6,
+        text: 'Vuelves a despertar en un hospital. Has tenido una segunda sobredosis. Esta vez, estuviste muerto durante varios minutos.',
+        choices: [
+          { text: 'Escapar del hospital para consumir', impact: +20, next: 7 },
+          { text: 'Aceptar tratamineto intensivo', impact: -15, next: 12}
+        ]
+      },
+      {
+        id: 7,
+        text: 'Estás solo, tu piel está gris, tus pupilas diminutas. Te cuesta hablar. El dolor no para. Tu vida depende de un hilo.',
+        choices: [
+          { text: 'No piensas en ello, solo en otra dosis.', impact: +30, next: 8 },
+          { text: 'Pedir socorro desesperadamente', impact: -10, next: 12 }
+        ]
+      },
+      {
+        id: 8,
+        text: 'Esta es tu historia con el fentanilo. Estás al borde del abismo, has entrado en un agujero muy negro. Los demonios te tienen bien agarrado.',
+        isFinal: true
+      },
+      {
+        id: 9,
+        text: '¡Muy bien! Así es como conservas tu vida y tus proyectos.',
+        isFinal: true
+      },
+      {
+        id: 10,
+        text: 'Has conseguido dejarlo pronto, todo el mundo no tiene la misma suerte.',
+        isFinal: true
+      },
+      {
+        id: 11,
+        text: 'Las cosas se han complicado bastante. Esta mierda te ha dejado mal aspecto.',
+        isFinal: true
+      },
+      {
+        id: 12,
+        text: 'Decides parar al borde de la muerte. ¿Te ha merecido la pena el sacrificio?',
+        isFinal: true
+      }
+    ]
   },
   {
     drug: 'Krokodil',
     photo: '../../public/images/drogas/krokodil.jpg',
     intro: 'Al principio... es como la heroína. Un chute de paz absoluta. El cuerpo se relaja, la mente se apaga. Nada duele, nada importa. Solo queda una sensación intensa... y dulce.',
-    scenesArray: []
+    scenesArray: [
+      {
+        id: 0,
+        text: 'Un amigo te ofrece algo "barato y potente". Es una mezcla casera, líquida, de aspecto sucio. Te dice que es lo único que le calma. Que es la leche.',
+        choices: [
+          { text: 'Inyectar', impact: +20, next: 1 },
+          { text: 'Negarte', impact: 0, next: 9 }
+        ]
+      },
+      {
+        id: 1,
+        text: 'El subidón es fuerte y rápido. Pero dura poco. A los pocos minutos ya estás inquieto. Tu piel empieza a picar.',
+        choices: [
+          { text: 'Pedir otra dosis', impact: +15, next: 2 },
+          { text: 'No quieres más', impact: +5, next: 10}
+        ]
+      },
+      {
+        id: 2,
+        text: 'Tu brazo empieza a cambiar de color. La zona donde inyectaste se ve grisácea. Sientes ardor por dentro.',
+        choices: [
+          { text: 'Ignora el dolor, la sensación de la dosis te gusta.', impact: +20, next: 3 },
+          { text: 'Tratar de desinfectarte', impact: +10, next: 10 }
+        ]
+      },
+      {
+        id: 3,
+        text: 'Intentas resistir, pero los temblores son intensos. Te arrancas costras con las uñas. No paras de sudar.',
+        choices: [
+          { text: 'Volver a inyectarte para calmarte', impact: +15, next: 4 },
+          { text: 'Pedir ayuda médica', impact: -10, next: 10 }
+        ]
+      },
+      {
+        id: 4,
+        text: 'Tus dedos se han ennegrecido. En la calle, nadie te quiere cerca. Tus heridas supuran. No puedes ocultarlo.',
+        choices: [
+          { text: 'Seguir consumiendo a pesar del daño', impact: +20, next: 5 },
+          { text: 'Buscar un sitio donde esconderte', impact: +10, next: 6 }
+        ]
+      },
+      {
+        id: 5,
+        text: 'Un médico de urgencias te dice que tiene que amputarte el brazo. Te da igual, solo piensas en la próxima dosis.',
+        choices: [
+          { text: 'Escapar del hospital', impact: +15, next: 6 },
+          { text: 'Aceptar el tratamiento', impact: -5, next: 11}
+        ]
+      },
+      {
+        id: 6,
+        text: 'Duermes en un callejón, ya no sientes el brazo. Apenas puedes caminar. Eres como la peste negra, nadie te quiere cerca.',
+        choices: [
+          { text: 'Inyectarte en la pierna', impact: +25, next: 7 },
+          { text: 'No quieres seguir con esta pesadilla', impact: -5, next: 11}
+        ]
+      },
+      {
+        id: 7,
+        text: 'Tu cuerpo está en estado crítico. Te han rechazado ya en dos hospitales. Las moscas rondan tus heridas, esta mierda te está comiendo literalmente la piel.',
+        choices: [
+          { text: 'Consumir, consumir, consumir', impact: +25, next: 8 },
+          { text: 'No quieres morir, quieres internarte', impact: -10, next: 11}
+        ]
+      },
+      {
+        id: 8,
+        text: 'Tu relación con el Krokodil te ha dejado muerto en vida. Eres como un zombi, estás acabado.',
+        isFinal: true
+      },
+      {
+        id: 9,
+        text: 'La mejor decisión que puedes tomar. Siempre di NO a las drogas.',
+        isFinal: true
+      },
+      {
+        id: 10,
+        text: 'Con esto tienes más que suficiente, aunque debiste decir no desde el principio.',
+        isFinal: true
+      },
+      {
+        id: 11,
+        text: 'Tu aspecto es horrible, tu cuerpo está muy maltratado. ¿Porqué te has hecho esto?',
+        isFinal: true
+      }
+    ]
   }
 ]

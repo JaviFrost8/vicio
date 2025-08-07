@@ -5,8 +5,10 @@ import { useGameContext } from '../context/GameContext'
 export const Game = ({ drug }) => {
 
   const drugFounded = scenes.find(d => d.drug === drug)
-  const { currentScene, initialScene, goToScene, addScore } = useGameContext();
+  const { currentScene, initialScene, goToScene, addScore, score } = useGameContext();
   const scene = drugFounded.scenesArray[currentScene]
+
+  console.log(score)
 
   return (
     <div className='big-container'>
