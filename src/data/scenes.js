@@ -88,7 +88,7 @@ export const scenes = [
       },
       {
         id: 11,
-        text: 'Ya has tenido suficiente, sabes que un par de copas son suficientes, no quieres pasarlo mal. Buena elección.',
+        text: 'Ya has tenido bastante, sabes que un par de copas son suficientes, no quieres pasarlo mal. Buena elección.',
         isFinal: true
       },
       {
@@ -268,8 +268,85 @@ export const scenes = [
     drug: 'GHB',
     photo: '../../public/images/drogas/ghb.jpg',
     intro: 'Una dosis y todo se vuelve ligero. Ríes sin motivo, bailas sin miedo. El mundo vibra, el cuerpo se suelta. Sensaciones intensas, caricias más vivas. Todo es placer...sin frenos.',
-    scenesArray: []
-    //FALTA AQUI TODA LA INFORMACIÓN Y LAS ESCENAS DEL GHB
+    scenesArray: [
+      {
+        id: 0,
+        text: 'Una noche cualquiera. Un amigo te ofrece GHB. “Te pone sociable, con buen rollo. Solo unas gotas.”',
+        choices: [
+          { text: 'Aceptar por curiosidad', impact: +5, next: 1 },
+          { text: 'Decir que no por precaución', impact: 0, next: 9 }
+        ]
+      },
+      {
+        id: 1,
+        text: 'Te relajas. Todo parece más fácil. Ríes más. Te sientes conectado. La noche fluye. Lo llaman “el éxtasis líquido”.',
+        choices: [
+          { text: 'Volver a usarlo otro día de fiesta', impact: +5, next: 2 },
+          { text: 'Usarlo también en casa para relajarte', impact: +10, next: 2 }
+        ]
+      },
+      {
+        id: 2,
+        text: 'Te empieza a gustar tomarlo antes de quedar con gente. Sientes que sin él no fluyes igual. Que sin GHB no eres tú.',
+        choices: [
+          { text: 'Consumirlo antes de cada evento social', impact: +10, next: 3 },
+          { text: 'Subir un poco la dosis para prolongar el efecto', impact: +15, next: 3 }
+        ]
+      },
+      {
+        id: 3,
+        text: 'Empiezas a olvidarte de cosas. Te cuesta dormir sin GHB. Tienes pequeños apagones de memoria que no puedes explicar.',
+        choices: [
+          { text: 'Investigar sobre efectos secundarios', impact: +10, next: 4 },
+          { text: 'Restar importancia y seguir consumiendo', impact: +15, next: 4 }
+        ]
+      },
+      {
+        id: 4,
+        text: 'Te despiertas una mañana desorientado, sin recordar cómo llegaste a casa. La gente te cuenta que estuviste raro, agresivo.',
+        choices: [
+          { text: 'Evitar hablar del tema', impact: +10, next: 5 },
+          { text: 'Consumir menos durante un tiempo', impact: +10, next: 5 }
+        ]
+      },
+      {
+        id: 5, 
+        text: 'Cada vez necesitas más para sentir algo. Ya no es solo de fiesta. Lo usas para dormir. Para calmar la ansiedad.',
+        choices: [
+          { text: 'Empezar a llevar el bote siempre contigo', impact: +10, next: 6 },
+          { text: 'Tomarlo a escondidas durante el día', impact: +15, next: 6 }
+        ]
+      },
+      {
+      id: 6,
+      text: 'Un día te pasas de dosis. Te desmayas. Tus amigos se asustan. Te salvan. Pero podría haber sido peor.',
+      choices: [
+        { text: 'Ignorarlo, fue un “accidente”', impact: +15, next: 7 },
+        { text: 'Prometerte que será la última vez', impact: +5, next: 7 }
+      ]
+    },
+    {
+      id: 7,
+      text: 'Empiezas a consumir a diario. Tu cuerpo tiembla si no tomas. Tienes ataques de ansiedad. Dolores musculares. Insomnio.',
+      choices: [
+        { text: 'Tomar más GHB para calmarte', impact: +20, next: 8 },
+        { text: 'Mezclarlo con alcohol para reforzar el efecto', impact: +25, next: 8 }
+      ]
+    },
+    {
+      id: 8,
+      text: 'Un día, simplemente no te despiertas a tiempo. Estás en el hospital. Sobredosis. Casi no lo cuentas.',
+      choices: [
+        { text: 'Recaer tras salir del hospital', impact: +25, next: 9 },
+        { text: 'Intentar dejarlo por tu cuenta', impact: +10, next: 9 }
+      ]
+    },
+    {
+      id: 9,
+      text: 'Hasta aquí llega tu historia con la Ketamina. Tienes daños neurológicos leves. Te cuesta concentrarte. Te cuesta vivir sin la sustancia. Tienes miedo, pero estás enganchado. Espero que tengas suerte y fuerza de voluntad para recuperar tu vida. Va a ser complicado.',
+      isFinal: true
+    }
+    ]
   },
   {
     drug: 'Heroína',
@@ -366,8 +443,85 @@ export const scenes = [
     drug: 'Ketamina',
     photo: '../../public/images/drogas/ketamina.webp',
     intro: 'Un viaje sin peso. La realidad se dobla, se estira, se disuelve. Flotas en otra dimensión. Lejos del dolor, lejos del cuerpo. Solo queda el asombro... y el vacío tranquilo.',
-    scenesArray: []
-    //FALTA AQUI TODA LA INFORMACIÓN Y LAS ESCENAS DE LA KETAMINA
+    scenesArray: [
+      {
+        id: 0,
+        text: 'Es tu primer festival. Música electrónica, luces, amigos. Un amigo te ofrece "Keta". "Solo te desconecta un rato, tio".',
+        choices: [
+          { text: 'Aceptar con curiosidad', impact: +5, next: 1 },
+          { text: 'Decir que no, por precación', impact: 0, next: 9 }
+        ]
+      },
+      {
+        id: 1,
+        text: 'Te sientes raro, como si tu cuerpo no fuere tuyo. Todo va lento. Te ríes, luego, blackout. No recuerdas nada.',
+        choices: [
+          { text: 'Reírte con los demás', impact: +5, next: 2 }, 
+          { text: 'No pasa nada, ya preguntaré que pasó', impact: +5, next: 2 }
+        ]
+      },
+      {
+        id: 2,
+        text: 'Pasa un mes, otro festival. Otro chute. Ya sabes como va. Lo mezclas con alcohol. Te gusta el viaje.',
+        choices: [
+          { text: 'Subir la dosis para ver "el agujero"', impact: +10, next: 3 },
+          { text: 'Con esto me basta, no quiero más', impact: 0, next: 9}
+        ]
+      },
+      {
+        id: 3,
+        text: 'Has empezado a consumir también en casa, con música. Te aísla, te evades. Sientes que lo controlas.',
+        choices: [
+          { text: 'Sigues usándola para desconectar', impact: +5, next: 4 },
+          { text: 'Probarla antes de dormir', impact: +10, next: 4 }
+        ]
+      },
+      {
+        id: 4,
+        text: 'Tus amigos dicen que te quedas colgado, que "te vas" demasiado. Tu te molestas. "No entiendo tu mundo".',
+        choices: [
+          { text: 'Crees que exageran, sigues con lo tuyo.', impact: +10, next: 5 },
+          { text: 'Te evades para colocarte.', impact: -5, next: 5 }
+        ]
+      },
+      {
+        id: 5,
+        text: 'Has perdido el apetito. Tienes episodios de despersonalización. A veces no sientes las piernas, vómitos, mareos.',
+        choices: [
+          { text: 'Ignorarlo, es parte del viaje', impact: +10, next: 6 },
+          { text: 'Busca más para compensar', impact: +5, next: 6 }
+        ]
+      },
+      {
+        id: 6,
+        text: 'Te han echado del trabajo. Dijeron que llegaste como ido, con la mirada vacía. Ni te acuerdas de lo que pasó.',
+        choices: [
+          { text: 'Buscar otro trabajo sin dejar de consumir', impact: +15, next: 7 },
+          { text: 'Consumir para evadirte del despido', impact: +15, next: 7 }
+        ]
+      },
+      {
+        id: 7,
+        text: 'Tu vejiga está dañada. Tienes cistitis crónica. El médico te pregunta si consumes Ketamina. Te asustas, pero no lo dices.',
+        choices: [
+          { text: 'Mentir y seguir consumiendo', impact: +15, next: 8 },
+          { text: 'Decir que solo fué "alguna vez"', impact: +10, next: 8}
+        ]
+      },
+      {
+        id: 8,
+        text: 'Empiezas a mezclar Ketamina con otras sustancias. Pastillas, alcohol. No te importa. Ya no vives, sobrevives.',
+        choices: [
+          { text: 'Buscar un colocón más fuerte', impact: +15, next: 9 },
+          { text: 'Consumir solo para dormir', impact: +10, next: 9 }
+        ]
+      },
+      {
+        id: 9,
+        text: 'Tu viaje con la Ketamina llega hasta aquí. Despiertas en una camilla. Has estado inconsciente horas. Tienes daño cerebral leve, te dicen que fué por sobredosis.',
+        isFinal: true
+      }
+    ]
   },
   {
     drug: 'Metanfetamina',
