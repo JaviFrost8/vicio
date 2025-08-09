@@ -1,35 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { scenes } from '../data/scenes'
 import { useGameContext } from '../context/GameContext'
+import { SelectChoice } from './SelectChoice'
+import { ResumenDecisions } from './ResumenDecisions'
 
-export const Game = ({ drug }) => {
-
-  const drugFounded = scenes.find(d => d.drug === drug)
-  const { currentScene, initialScene, goToScene, addScore, score } = useGameContext();
+export const Game = () => {
+  
+  const { drugSelected, currentScene, initialScene, goToScene, addScore, gameOver } = useGameContext();
+  const drugFounded = scenes.find(d => d.drug === drugSelected)
   const scene = drugFounded.scenesArray[currentScene]
-
-  console.log(score)
+  
 
   return (
     <div className='big-container'>
       <div className='game-container'>
-        {
-          currentScene !== null ? (
+        { gameOver ? (
+          <ResumenDecisions />
+        ) : currentScene !== null ? (
             <div className='decisions-container'>
               <h3>{scene.text}</h3>
-              {scene.choices?.map((choice, index) => (
-                <button onClick={() => {
-                  goToScene(choice.next)
-                  addScore(choice.impact)
-                }} key={index}>{choice.text}</button>
-              ))}
+              <SelectChoice scene={scene} goToScene={goToScene} addScore={addScore} />
             </div>
-          ) : (
+        ) : (
             <>
               <div className='welcome-drug-container'>
                 <h2 className='title-drug'>{drugFounded.drug}</h2>
-                <div className='intro-drug'>{drugFounded.intro}</div>
                 <img className='photo-drug' src={drugFounded.photo} />
+                <div className='intro-drug'>{drugFounded.intro}</div>
                 <button onClick={() => initialScene()} className='btn'>Empezar</button>
               </div>
             </>

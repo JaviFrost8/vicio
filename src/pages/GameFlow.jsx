@@ -3,11 +3,12 @@ import { WarningScreen } from '../components/WarningScreen';
 import { SelectionDrug } from '../components/SelectionDrug';
 import { Game } from '../components/Game';
 import { BackgroundAudio } from '../components/BackgroundAudio';
+import { useGameContext } from '../context/GameContext';
 
 export const GameFlow = () => {
 
   const [acceptedWarning, setAcceptedWarning] = useState(false);
-  const [drugSelected, setDrugSelected] = useState(null)
+  const { drugSelected, setDrugSelected } = useGameContext()
 
   return (
     <div className='big-container'>
@@ -15,13 +16,11 @@ export const GameFlow = () => {
         <WarningScreen onAccept={() => setAcceptedWarning(true)} />
 
       ) : !drugSelected ? (
-        <SelectionDrug 
-          setDrugSelected={setDrugSelected}
-        />
+        <SelectionDrug />
         
       ) : (
         <>
-          <Game drug={drugSelected} />
+          <Game />
         </>
       )}
 

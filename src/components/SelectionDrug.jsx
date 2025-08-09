@@ -1,8 +1,11 @@
 import React from 'react'
 import sano from '../../public/images/sano.png'
 import { DrugsButtons } from './DrugsButtons'
+import { useGameContext } from '../context/GameContext'
 
-export const SelectionDrug = ({ setDrugSelected }) => {
+export const SelectionDrug = () => {
+
+  const { setDrugSelected } = useGameContext();
 
   return (
     <div className='intro-container'>

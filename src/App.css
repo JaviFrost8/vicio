@@ -161,10 +161,10 @@ a{
   background-color: var(--thirst-color);
   width: 100%;
   min-height: 100vh;
-  animation: description 2s ease;
+  animation: see 2s ease;
 }
 
-@keyframes description{
+@keyframes see{
   from {opacity: 0}
   to {opacity: 1}
 }
@@ -248,7 +248,7 @@ a{
   justify-content: center;
   flex-direction: column;
   width: 60%;
-  animation: description 1s ease;
+  animation: see 1s ease;
 }
 
 .title-drug{
@@ -272,6 +272,59 @@ a{
 }
 
 .decisions-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #6e6e6e;
+  padding: 25px 45px;
+  border-radius: 10px;
+  width: 60%;
   margin-top: 200px;
 }
 
+.decisions-container h3{
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.btns-decisions-container{
+  margin: 25px 0;
+  margin-top: 50px;
+}
+
+.btns-decisions-container button{
+  font-size: 20px;
+  padding: 15px 25px;
+  margin: 0 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.btns-decisions-container button:hover{
+  background-color: var(--thirst-color);
+  color: #eee;
+}
+
+.finalBtn{
+  background-color: var(--thirst-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.finalBtn:hover{
+  background-color: var(--fourth-color) !important
+}
+
+.resumen-container{
+  margin-top: 200px;
+}

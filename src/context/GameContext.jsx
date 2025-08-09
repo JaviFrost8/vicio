@@ -6,6 +6,8 @@ export function GameProvider({ children }){
 
   const [currentScene, setCurrentScene] = useState(null);
   const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false)
+  const [drugSelected, setDrugSelected] = useState(null)
 
   function initialScene(){
     setCurrentScene(0)
@@ -19,13 +21,29 @@ export function GameProvider({ children }){
     setCurrentScene(scene)
   }
 
+  function theGameIsOver(){
+    setGameOver(true)
+  }
+
+  function reset(){
+    setCurrentScene(null)
+    setScore(0)
+    setGameOver(false)
+    setDrugSelected(null)
+  }
+
   return(
     <GameContext.Provider value={{
       currentScene,
       score,
+      gameOver,
+      drugSelected,
+      setDrugSelected,
       initialScene,
       goToScene,
-      addScore
+      addScore,
+      theGameIsOver,
+      reset
     }}>
       { children }
     </GameContext.Provider>

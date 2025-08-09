@@ -113,7 +113,7 @@ export const scenes = [
         text: 'Estás en la feria de tu ciudad con dos amigos. Uno se hace tres rayas. Los dos consumen, faltas tú.',
         choices: [
           { text: 'Decides probar', impact: +15, next: 1 },
-          { text: 'Les dices que no quieres', impact: 0, next: 6 }
+          { text: 'Les dices que no quieres', impact: 0, next: 9 }
         ]
       },
       {
@@ -137,33 +137,51 @@ export const scenes = [
         text: 'Ha pasado el tiempo. Pierdes dos trabajos por bajo rendimiento, llegabas tarde.',
         choices: [
           { text: 'Te aíslas aún más y evitas a tus amigos de siempre', impact: +25, next: 4 },
-          { text: 'Buscas ayuda en un familiar de confianza', impact: -15, next: 4}
+          { text: 'Buscas ayuda en un familiar de confianza', impact: -10, next: 10 }
         ]
       },
       {
         id: 4,
         text: 'Después de lo pasado, esta droga sigue poniéndote a prueba. Te tiene atrapado hasta un punto que no imaginabas.',
         choices: [
-          { text: 'Recaes tras un intento de rehabilitación', impact: +40, next: 5 },
+          { text: 'Recaes tras un intento de rehabilitación', impact: +25, next: 5 },
           { text: 'Sigues en tratamiento, con recaídas pero con esperanzas', impact: -10, next: 5 }
         ]
       },
       {
         id: 5,
-        text: 'Tu camino con la cocaína ha dejado huella, las decisiones que tomaste determinaron tu destino y deterioro. Una sola elección marca toda una vida.',
-        isFinal: true
+        text: 'El consumo se vuelve costoso y empiezas a gastar más de lo que tienes. Vendes todo lo que tienes a mano, incluso a tu familia.',
+        choices: [
+          { text: 'No pasa nada, el no tener dinero es temporal', impact: +20, next: 6 },
+          { text: 'Decides ir en serio a por ayuda profesional', impact: -10, next: 10 }
+        ]
       },
       {
         id: 6,
-        text: 'Tus amigos siguen consumiendo, tu decides mantenerte al margen. Con el tiempo ellos se alejan.',
+        text: 'Pierdes peso, tu nariz sangra con frecuencia y la paranoia se apodera de ti.',
         choices: [
-          { text: 'Te alejas de ese grupo y haces nuevos amigos', impact: -10, next: 7 },
-          { text: 'Sigues saliendo con ellos sin consumir', impact: 0, next: 7 }
+          { text: 'Nada que una raya no pueda arreglar', impact: +15, next: 7 },
+          { text: 'Pides ayuda a tu pareja, familia, amigos.', impact: -10, next: 10 }
         ]
       },
       {
         id: 7,
+        text: 'Lo has perdido todo, el trabajo, tu relación de pareja, tu coche, tu casa. Lo has perdido absolutamente TODO.',
+        isFinal: true
+      },
+      {
+        id: 8,
         text: 'Años después estás en una relación estable y tienes trabajo. Uno de tus viejos amigos murió por sobredosis. Aquel "no" cambió tu vida por completo.',
+        isFinal: true
+      },
+      {
+        id: 9,
+        text: '¡Enhorabuena! Elegiste la opción más inteligente, el NO es la mejor opción, SIEMPRE.',
+        isFinal: true
+      },
+      {
+        id: 10,
+        text: 'Buscar ayuda es muy importante, solo es muy dificil, bien hecho a medias, debiste decir NO desde el principio.',
         isFinal: true
       }
     ]
@@ -363,7 +381,7 @@ export const scenes = [
       },
       {
         id: 1,
-        text: 'Te inyectas por primera vez, sientes una paz profunda, no existen los problemas. El mundo se desvanece y todo parece estar bien por fin',
+        text: 'Te inyectas por primera vez, sientes una paz profunda, no existen los problemas. El mundo se desvanece y todo parece estar bien por fin.',
         choices: [
           { text: 'Volver a probarla al día siguiente', impact: +15, next: 2 },
           { text: 'Alejarte, sabes que es peligroso', impact: +5, next: 10}
