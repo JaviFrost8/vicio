@@ -375,7 +375,7 @@ export const scenes = [
         id: 0,
         text: 'Estás en un piso con "colegas". Les cuentas tus problemas. Uno de ellos saca una jeringuilla y te dice: "Esto te va a hacer olvidar todo".',
         choices: [
-          { text: 'Probarla', impact: +15, next: 1 },
+          { text: 'Probarla', impact: +10, next: 1 },
           { text: 'Negarte rotundamente', impact: 0, next: 9 }
         ]
       },
@@ -392,7 +392,7 @@ export const scenes = [
         text: 'Ha pasado un tiempo, tu cuerpo ya empieza a necesitarla. Tienes náuseas, sudores fríos. Solo se calma cuando consumes.',
         choices: [
           { text: 'Buscar la próxima dosis', impact: +10, next: 3 },
-          { text: 'Tratar de soportar el mono', impact: +10, next: 10}
+          { text: 'Tratar de soportar el mono', impact: +15, next: 10}
         ]
       },
       {
@@ -407,7 +407,7 @@ export const scenes = [
         id: 4,
         text: 'Compartes jeringuilla en un descampado. No sabes si los demás están enfermos, pero eso ahora mismo te da igual.',
         choices: [
-          { text: 'Consumir sin pensar en nada', impact: +10, next: 5 },
+          { text: 'Consumir sin pensar en nada', impact: +5, next: 5 },
           { text: 'Lo piensas mejor, no quieres seguir.', impact: +10, next: 10}
         ]
       },
@@ -423,8 +423,8 @@ export const scenes = [
         id: 6,
         text: 'Empiezas a mentir y a robar. Tu familia te ha echado de casa. Vives en la calle. Cada día te ves peor que el anterior.',
         choices: [
-          { text: 'Robar para conseguir más', impact: +10, next: 7 },
-          { text: 'Intentar llamar a alguien por ayuda', impact: -5, next: 11}
+          { text: 'Robar para conseguir más', impact: +15, next: 7 },
+          { text: 'Intentar llamar a alguien por ayuda', impact: 0, next: 11}
         ]
       },
       {
