@@ -1,11 +1,8 @@
 import React from 'react'
 import sano from '../../public/images/sano.png'
 import { DrugsButtons } from './DrugsButtons'
-import { useGameContext } from '../context/GameContext'
 
 export const SelectionDrug = () => {
-
-  const { setDrugSelected } = useGameContext();
 
   return (
     <div className='intro-container'>
@@ -34,7 +31,7 @@ export const SelectionDrug = () => {
 
         <div className='drugs-container'>
           <h1 className='destroy-text'>Elige como destrozar tu vida</h1>
-          <DrugsButtons setDrugSelected={setDrugSelected} />
+          <DrugsButtons />
         </div>
       </div>
 

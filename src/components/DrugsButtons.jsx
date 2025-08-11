@@ -1,7 +1,11 @@
 import React from 'react'
 import { drugs } from '../data/drugs'
+import { useGameContext } from '../context/GameContext'
 
-export const DrugsButtons = ({ setDrugSelected }) => {
+export const DrugsButtons = () => {
+
+  const { setDrugSelected } = useGameContext();
+
   return (
     <div className='btns-container'>
       {

@@ -8,7 +8,7 @@ import { useGameContext } from '../context/GameContext';
 export const GameFlow = () => {
 
   const [acceptedWarning, setAcceptedWarning] = useState(false);
-  const { drugSelected, setDrugSelected } = useGameContext()
+  const { drugSelected } = useGameContext()
 
   return (
     <div className='big-container'>

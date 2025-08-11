@@ -328,3 +328,7 @@ a{
 .resumen-container{
   margin-top: 200px;
 }
+
+.photo-result{
+  width: 300px;
+}

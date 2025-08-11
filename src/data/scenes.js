@@ -16,7 +16,7 @@ export const scenes = [
         id: 1,
         text: 'Empiezas a notar el efecto. Te sientes más suelto, más valiente.',
         choices: [
-          { text: 'Sigues tomando, te gusta la sensación', impact: +15, next: 2 },
+          { text: 'Sigues tomando, te gusta la sensación', impact: +5, next: 2 },
           { text: 'Ya has tenido suficiente', impact: 0, next: 11 }
         ]
       },
@@ -24,15 +24,15 @@ export const scenes = [
         id: 2,
         text: 'Pasas a la universidad. Conoces nuevos amigos, fiestas, litros, chupitos... El alcohol está en cada celebración.',
         choices: [
-          { text: 'Sigues bebiendo más a menudo.', impact: +20, next: 3 },
-          { text: 'Bebes solo en eventos', impact: +5, next: 11 }
+          { text: 'Sigues bebiendo más a menudo.', impact: +5, next: 3 },
+          { text: 'Bebes solo en eventos', impact: 0, next: 11 }
         ]
       },
       {
         id: 3,
         text: 'Te has desmayado dos veces por beber demasiado. Una vez perdiste el móvil, otra acabaste en urgencias.',
         choices: [
-          { text: 'Hacer bromas sobre eso', impact: +15, next: 4 },
+          { text: 'Hacer bromas sobre eso', impact: +5, next: 4 },
           { text: 'Preocuparte, has aprendido la lección.', impact: 0, next: 12 }
         ]
       },
@@ -40,7 +40,7 @@ export const scenes = [
         id: 4,
         text: 'Empiezas a beber también en casa, viendo partidos, solo. Te ayuda a “relajarte”. Empieza a ser una costumbre.',
         choices: [
-          { text: 'Bebes cada noche', impact: +25, next: 5 },
+          { text: 'Bebes cada noche', impact: +10, next: 5 },
           { text: 'El acohol te está trayendo problemas, lo dejas', impact: +5, next: 12}
         ]
       },
@@ -48,7 +48,7 @@ export const scenes = [
         id: 5,
         text: 'Tu pareja se queja: “No eres el mismo cuando bebes”. Pero tú piensas que exagera. Discutís cada vez más.',
         choices: [
-          { text: 'Bebes para no discutir', impact: +20, next: 6 },
+          { text: 'Bebes para no discutir', impact: +15, next: 6 },
           { text: 'Tiene razón, decides dejarlo', impact: +5, next: 12}
         ]
       },
@@ -56,7 +56,7 @@ export const scenes = [
         id: 6,
         text: 'Han pasado años. Has perdido tu relación. Tus amigos ya no te llaman. Borras recuerdos en cada resaca. La resaca es tu mejor amiga.',
         choices: [
-          { text: 'Aceptar que estás solo, bebes', impact: +20, next: 7 },
+          { text: 'Aceptar que estás solo, bebes', impact: +10, next: 7 },
           { text: 'Decides buscar ayuda profesional', impact: +5, next: 13 }
         ]
       },
@@ -64,7 +64,7 @@ export const scenes = [
         id: 7,
         text: 'Estás desempleado. Has llegado borracho a entrevistas. Tu aspecto físico ha cambiado, tienes la cara hinchada, los ojos apagados.',
         choices: [
-          { text: 'Sigues bebiendo para evadirte', impact: +20, next: 8 },
+          { text: 'Sigues bebiendo para evadirte', impact: +10, next: 8 },
           { text: 'Buscas cualquier ayuda, solo quieres dejarlo', impact: +5, next: 13 }
         ]
       },
@@ -72,7 +72,7 @@ export const scenes = [
         id: 8,
         text: 'Tu salud empeora. Tienes problemas hepáticos. El médico te advierte: “Si sigues bebiendo, no llegarás a viejo.”',
         choices: [
-          { text: 'Ignorarlo, ya estás roto', impact: +20, next: 9 },
+          { text: 'Ignorarlo, ya estás roto', impact: +15, next: 9 },
           { text: 'Tiene razón, debo dejarlo y lo haré.', impact: -5, next: 13}
         ]
       },
@@ -120,7 +120,7 @@ export const scenes = [
         id: 1,
         text: 'Han pasado tres meses. Desde entonces, la consumes en algunas fiestas. No la compras, pero la aceptas.',
         choices: [
-          { text: 'Empiezas a comprar para tener en casa', impact: +25, next: 2 },
+          { text: 'Empiezas a comprar para tener en casa', impact: +15, next: 2 },
           { text: 'Solo la tomas en ocasiones especiales', impact: +10, next: 2 }
         ]
       },
@@ -128,7 +128,7 @@ export const scenes = [
         id: 2,
         text: 'Ahora tu consumo es semanal. Empiezas a tener insomnio, ansiedad y a aislarte de tu familia.',
         choices: [
-          { text: 'Sigues consumiendo porque crees que te ayuda a rendir.', impact: +30, next: 3 },
+          { text: 'Sigues consumiendo porque crees que te ayuda a rendir.', impact: +10, next: 3 },
           { text: 'Intentas parar, pero no puedes del todo', impact: +10, next: 3 }
         ]
       },
@@ -136,7 +136,7 @@ export const scenes = [
         id: 3,
         text: 'Ha pasado el tiempo. Pierdes dos trabajos por bajo rendimiento, llegabas tarde.',
         choices: [
-          { text: 'Te aíslas aún más y evitas a tus amigos de siempre', impact: +25, next: 4 },
+          { text: 'Te aíslas aún más y evitas a tus amigos de siempre', impact: +10, next: 4 },
           { text: 'Buscas ayuda en un familiar de confianza', impact: -10, next: 10 }
         ]
       },
@@ -144,16 +144,16 @@ export const scenes = [
         id: 4,
         text: 'Después de lo pasado, esta droga sigue poniéndote a prueba. Te tiene atrapado hasta un punto que no imaginabas.',
         choices: [
-          { text: 'Recaes tras un intento de rehabilitación', impact: +25, next: 5 },
-          { text: 'Sigues en tratamiento, con recaídas pero con esperanzas', impact: -10, next: 5 }
+          { text: 'Recaes tras un intento de rehabilitación', impact: +15, next: 5 },
+          { text: 'Sigues en tratamiento, con recaídas pero con esperanzas', impact: -5, next: 5 }
         ]
       },
       {
         id: 5,
         text: 'El consumo se vuelve costoso y empiezas a gastar más de lo que tienes. Vendes todo lo que tienes a mano, incluso a tu familia.',
         choices: [
-          { text: 'No pasa nada, el no tener dinero es temporal', impact: +20, next: 6 },
-          { text: 'Decides ir en serio a por ayuda profesional', impact: -10, next: 10 }
+          { text: 'No pasa nada, el no tener dinero es temporal', impact: +15, next: 6 },
+          { text: 'Decides ir en serio a por ayuda profesional', impact: -5, next: 10 }
         ]
       },
       {
@@ -195,7 +195,7 @@ export const scenes = [
         id: 0,
         text: 'Estás en una plaza con colegas. Uno te ofrece una pipa de cristal. "Solo un toque", te dice. Te pica la curiosidad.',
         choices: [
-          { text: 'Decides una calada', impact: +20, next: 1 },
+          { text: 'Decides una calada', impact: +5, next: 1 },
           { text: 'Negarte y marcharte', impact: 0, next: 9 } 
         ]
       },
@@ -203,7 +203,7 @@ export const scenes = [
         id: 1,
         text: 'El efecto es inmediato, una euforia brutal. Pero en minutos desaparece y sientes un vacío extraño.',
         choices: [
-          { text: 'Pedir otra calada', impact: +15, next: 2 },
+          { text: 'Pedir otra calada', impact: +5, next: 2 },
           { text: 'Decides parar', impact: +5, next: 9 }
         ]
       },
@@ -211,7 +211,7 @@ export const scenes = [
         id: 2,
         text: 'Mañana vuelves a fumar, ya no es lo mismo. Se te acaba. Estás mas ansioso, mas tembloroso. No puedes dejar de pensar en la próxima calada.',
         choices: [
-          { text: 'Buscas más por tu cuenta', impact: +15, next: 3 },
+          { text: 'Buscas más por tu cuenta', impact: +10, next: 3 },
           { text: 'Llamar a un amigo que te ayude', impact: -5, next: 10 }
         ]
       },
@@ -235,7 +235,7 @@ export const scenes = [
         id: 5,
         text: 'Ha pasado el tiempo. Tu nivel de dependecia es alto. Llevas días sin comer, tienes alucinaciones. Escuchas pasos que no existen.',
         choices: [
-          { text: 'Consumes para calmarte', impact: +20, next: 6 },
+          { text: 'Consumes para calmarte', impact: +15, next: 6 },
           { text: 'Buscar refugio', impact: +10, next: 12 }
         ]
       },
@@ -243,7 +243,7 @@ export const scenes = [
         id: 6,
         text: 'Lo has perdido todo. Robas para consumir. Te duelen los huesos. Te miras al espejo y no te reconoces.',
         choices: [
-          { text: 'Fumar para calmar dolores', impact: +20, next: 7 },
+          { text: 'Fumar para calmar dolores', impact: +15, next: 7 },
           { text: 'Pedir ayuda urgentemente', impact: -10, next: 12 }
         ]
       },
@@ -375,7 +375,7 @@ export const scenes = [
         id: 0,
         text: 'Estás en un piso con "colegas". Les cuentas tus problemas. Uno de ellos saca una jeringuilla y te dice: "Esto te va a hacer olvidar todo".',
         choices: [
-          { text: 'Probarla', impact: +20, next: 1 },
+          { text: 'Probarla', impact: +15, next: 1 },
           { text: 'Negarte rotundamente', impact: 0, next: 9 }
         ]
       },
@@ -383,15 +383,15 @@ export const scenes = [
         id: 1,
         text: 'Te inyectas por primera vez, sientes una paz profunda, no existen los problemas. El mundo se desvanece y todo parece estar bien por fin.',
         choices: [
-          { text: 'Volver a probarla al día siguiente', impact: +15, next: 2 },
+          { text: 'Volver a probarla al día siguiente', impact: +5, next: 2 },
           { text: 'Alejarte, sabes que es peligroso', impact: +5, next: 10}
         ]
       },
       {
         id: 2,
-        text: 'Tu cuerpo ya empieza a necesitarla. Tienes náuseas, sudores fríos. Solo se calma cuando consumes.',
+        text: 'Ha pasado un tiempo, tu cuerpo ya empieza a necesitarla. Tienes náuseas, sudores fríos. Solo se calma cuando consumes.',
         choices: [
-          { text: 'Buscar la próxima dosis', impact: +15, next: 3 },
+          { text: 'Buscar la próxima dosis', impact: +10, next: 3 },
           { text: 'Tratar de soportar el mono', impact: +10, next: 10}
         ]
       },
@@ -399,15 +399,15 @@ export const scenes = [
         id: 3,
         text: 'Intentas parar, pero tu cuerpo no coopera. Dolor muscular, insomnio, ansiedad extrema. El síndrome de abstinencia es brutal.',
         choices: [
-          { text: 'Consumir de nuevo para calmar el dolor', impact: +20, next: 4 },
-          { text: 'Llamar a una clínica de desintoxicación', impact: +10, next: 10}
+          { text: 'Consumir de nuevo para calmar el dolor', impact: +15, next: 4 },
+          { text: 'Llamar a una clínica de desintoxicación', impact: +5, next: 10}
         ]
       },
       {
         id: 4,
         text: 'Compartes jeringuilla en un descampado. No sabes si los demás están enfermos, pero eso ahora mismo te da igual.',
         choices: [
-          { text: 'Consumir sin pensar en nada', impact: +20, next: 5 },
+          { text: 'Consumir sin pensar en nada', impact: +10, next: 5 },
           { text: 'Lo piensas mejor, no quieres seguir.', impact: +10, next: 10}
         ]
       },
@@ -415,7 +415,7 @@ export const scenes = [
         id: 5,
         text: 'Te enteras que uno de tus "colegas" tiene hepatitis. Sientes miedo, pero la ansiedad por consumir lo tapa todo.',
         choices: [
-          { text: 'Ignorar el miedo y pincharte otra vez', impact: +20, next: 6 },
+          { text: 'Ignorar el miedo y pincharte otra vez', impact: +10, next: 6 },
           { text: 'Buscar una alternativa más "segura"', impact: +5, next: 11}
         ]
       },
@@ -423,7 +423,7 @@ export const scenes = [
         id: 6,
         text: 'Empiezas a mentir y a robar. Tu familia te ha echado de casa. Vives en la calle. Cada día te ves peor que el anterior.',
         choices: [
-          { text: 'Robar para conseguir más', impact: +20, next: 7 },
+          { text: 'Robar para conseguir más', impact: +10, next: 7 },
           { text: 'Intentar llamar a alguien por ayuda', impact: -5, next: 11}
         ]
       },
@@ -431,7 +431,7 @@ export const scenes = [
         id: 7,
         text: 'Tu cuerpo está destrozado. Estás cubierto de marcas, tienes infecciones. Apenas puedes caminar.',
         choices: [
-          { text: 'Seguir consumiendo, es tu medicina.', impact: +20, next: 8 },
+          { text: 'Seguir consumiendo, es tu medicina.', impact: +15, next: 8 },
           { text: 'Pedir ayuda médica urgente', impact: -10, next: 11}
         ]
       },
@@ -550,7 +550,7 @@ export const scenes = [
         id: 0,
         text: 'Un conocido te ofrece un cristal. "Te vas a sentir como un superhéroe" te dice. Estás en una fiesta y todo el mundo parece feliz.',
         choices: [
-          { text: 'Probar la metanfetamina', impact: +20, next: 1 },
+          { text: 'Probar la metanfetamina', impact: +10, next: 1 },
           { text: 'Rechazarla', impact: 0, next: 8 }
         ]
       },
@@ -558,7 +558,7 @@ export const scenes = [
         id: 1,
         text: 'Sientes una oleada de energía y confianza. Todo parece fácil. No tienes hambre, ni sueño, ni miedo.',
         choices: [
-          { text: 'Tomar otra dosis para mantener el subidón', impact: +15, next: 2 },
+          { text: 'Tomar otra dosis para mantener el subidón', impact: +5, next: 2 },
           { text: 'Tratar de parar ahí', impact: +5, next: 9 }
         ]
       },
@@ -566,16 +566,16 @@ export const scenes = [
         id: 2,
         text: 'Han pasado dos días y no has dormido, tu mente empieza a correr sin control. Te obsesionas con limpiar todo a fondo.',
         choices: [
-          { text: 'Seguir consumiendo', impact: +20, next: 3 },
-          { text: 'Intentar descansar', impact: +10, next: 9 }
+          { text: 'Seguir consumiendo', impact: +10, next: 3 },
+          { text: 'Renegar de la sustancia', impact: +10, next: 9 }
         ]
       },
       {
         id: 3,
-        text: 'Empiezas a ver sombras. Tienes la piel irritada, crees que hay insectos bajo ella. Te rascas hasta sangrar.',
+        text: 'Ha llovido mucho. Empiezas a ver sombras. Tienes la piel irritada, crees que hay insectos bajo ella. Te rascas hasta sangrar.',
         choices: [
-          { text: 'Encerrarte a consumir solo', impact: +20, next: 4 },
-          { text: 'Salir a la calle desorientado', impact: +10, next: 5 }
+          { text: 'Encerrarte a consumir solo', impact: +15, next: 4 },
+          { text: 'Salir a la calle desorientado', impact: +15, next: 5 }
         ]
       },
       {
@@ -583,7 +583,7 @@ export const scenes = [
         text: 'Han pasado días. No has comido. Tu rostro está pálido. Tus dientes empiezan a romperse, todo tu cuerpo te duele.',
         choices: [
           { text: 'Buscar más a cualquier precio', impact: +20, next: 5 },
-          { text: 'Intentar recordar quién eras antes', impact: -5, next: 9}
+          { text: 'Intentar recordar quién eras antes', impact: 0, next: 9}
         ]
       },
       {
@@ -628,7 +628,7 @@ export const scenes = [
         id: 0,
         text: 'Te ofrecen una pastilla en una fiesta. Te dicen que es "algo suave para relajarte, rollo oxy". Pero lleva fentanilo.',
         choices: [
-          { text: 'Tomarla sin pensarlo', impact: +20, next: 1 },
+          { text: 'Tomarla sin pensarlo', impact: +10, next: 1 },
           { text: 'Rechazarla con desconfianza', impact: 0, next: 9}
         ]
       },
@@ -636,31 +636,31 @@ export const scenes = [
         id: 1,
         text: 'En pocos minutos te sientes flotando. Tu cuerpo se hunde en el sofá. Todo parece lejano. Pero tu respiración empieza a volverse lenta.',
         choices: [
-          { text: 'Tomar otra más para mantener el efecto', impact: +15, next: 2 },
-          { text: 'Dormir un poco para descansar', impact: +5, next: 9}
+          { text: 'Tomar otra más para mantener el efecto', impact: +10, next: 2 },
+          { text: 'Dormir un poco, pasas de esto', impact: +5, next: 9}
         ]
       },
       {
         id: 2,
         text: 'Te despiertas en el suelo, alguien te reanimó con naloxona (medicamento contra sobredosis). Estuviste a punto de morir, te cuesta pensar con claridad.',
         choices: [
-          { text: 'Ignorar lo ocurrido y probar de nuevo', impact: +20, next: 3 },
-          { text: 'Intentar dejarlo por miedo', impact: +10, next: 10 }
+          { text: 'Ignorar lo ocurrido y seguir consumiendo', impact: +10, next: 3 },
+          { text: 'Intentar dejarlo por miedo', impact: +5, next: 10 }
         ]
       },
       {
         id: 3,
         text: 'Intentas dejarlo pero el dolor físico es insoportable. Tu cuerpo lo pide a gritos. Sientes calambres y fríos.',
         choices: [
-          { text: 'Consumir para aliviar síntomas', impact: +20, next: 4 },
-          { text: 'Ir a urgencias', impact: -10, next: 10 }
+          { text: 'Consumir para aliviar síntomas', impact: +15, next: 4 },
+          { text: 'Ir a urgencias', impact: 0, next: 10 }
         ]
       },
       {
         id: 4,
         text: 'Ahora lo necesitas cada pocas horas. Ya no es placer, es necesidad. Todo tu día gira en torno a conseguir más.',
         choices: [
-          { text: 'Buscar nuevos proveedores', impact: +20, next: 5 },
+          { text: 'Buscar nuevos proveedores', impact: +5, next: 5 },
           { text: 'Pedir ayuda a un familiar', impact: -5, next: 11}
         ]
       },
@@ -668,24 +668,24 @@ export const scenes = [
         id: 5,
         text: 'Te venden una bolsita en mal estado. Te la inyectas. Tu visión se nubla, tu cuerpo cae al suelo. Silencio.',
         choices: [
-          { text: 'Seguir consumiendo a pesar del riesgo', impact: +25, next: 6 },
-          { text: 'Tirar todo y huir', impact: +5, next: 11 }
+          { text: 'Seguir consumiendo a pesar del riesgo', impact: +5, next: 6 },
+          { text: 'Tirar todo y huir', impact: 0, next: 11 }
         ]
       },
       {
         id: 6,
         text: 'Vuelves a despertar en un hospital. Has tenido una segunda sobredosis. Esta vez, estuviste muerto durante varios minutos.',
         choices: [
-          { text: 'Escapar del hospital para consumir', impact: +20, next: 7 },
-          { text: 'Aceptar tratamineto intensivo', impact: -15, next: 12}
+          { text: 'Escapar del hospital para consumir', impact: +10, next: 7 },
+          { text: 'Aceptar tratamineto intensivo', impact: -5, next: 12}
         ]
       },
       {
         id: 7,
         text: 'Estás solo, tu piel está gris, tus pupilas diminutas. Te cuesta hablar. El dolor no para. Tu vida depende de un hilo.',
         choices: [
-          { text: 'No piensas en ello, solo en otra dosis.', impact: +30, next: 8 },
-          { text: 'Pedir socorro desesperadamente', impact: -10, next: 12 }
+          { text: 'No piensas en ello, solo en otra dosis.', impact: +10, next: 8 },
+          { text: 'Pedir socorro desesperadamente', impact: -5, next: 12 }
         ]
       },
       {
@@ -724,7 +724,7 @@ export const scenes = [
         id: 0,
         text: 'Un amigo te ofrece algo "barato y potente". Es una mezcla casera, líquida, de aspecto sucio. Te dice que es lo único que le calma. Que es la leche.',
         choices: [
-          { text: 'Inyectar', impact: +20, next: 1 },
+          { text: 'Inyectar', impact: +10, next: 1 },
           { text: 'Negarte', impact: 0, next: 9 }
         ]
       },
@@ -732,15 +732,15 @@ export const scenes = [
         id: 1,
         text: 'El subidón es fuerte y rápido. Pero dura poco. A los pocos minutos ya estás inquieto. Tu piel empieza a picar.',
         choices: [
-          { text: 'Pedir otra dosis', impact: +15, next: 2 },
+          { text: 'Pedir otra dosis', impact: +5, next: 2 },
           { text: 'No quieres más', impact: +5, next: 10}
         ]
       },
       {
         id: 2,
-        text: 'Tu brazo empieza a cambiar de color. La zona donde inyectaste se ve grisácea. Sientes ardor por dentro.',
+        text: '¿Que tal te encuentras después de un tiempo? Tu brazo empieza a cambiar de color. La zona donde inyectaste se ve grisácea. Sientes ardor por dentro.',
         choices: [
-          { text: 'Ignora el dolor, la sensación de la dosis te gusta.', impact: +20, next: 3 },
+          { text: 'Ignora el dolor, la sensación de la dosis te gusta.', impact: +10, next: 3 },
           { text: 'Tratar de desinfectarte', impact: +10, next: 10 }
         ]
       },
@@ -749,14 +749,14 @@ export const scenes = [
         text: 'Intentas resistir, pero los temblores son intensos. Te arrancas costras con las uñas. No paras de sudar.',
         choices: [
           { text: 'Volver a inyectarte para calmarte', impact: +15, next: 4 },
-          { text: 'Pedir ayuda médica', impact: -10, next: 10 }
+          { text: 'Pedir ayuda médica', impact: +5, next: 10 }
         ]
       },
       {
         id: 4,
         text: 'Tus dedos se han ennegrecido. En la calle, nadie te quiere cerca. Tus heridas supuran. No puedes ocultarlo.',
         choices: [
-          { text: 'Seguir consumiendo a pesar del daño', impact: +20, next: 5 },
+          { text: 'Seguir consumiendo a pesar del daño', impact: +15, next: 5 },
           { text: 'Buscar un sitio donde esconderte', impact: +10, next: 6 }
         ]
       },
@@ -772,7 +772,7 @@ export const scenes = [
         id: 6,
         text: 'Duermes en un callejón, ya no sientes el brazo. Apenas puedes caminar. Eres como la peste negra, nadie te quiere cerca.',
         choices: [
-          { text: 'Inyectarte en la pierna', impact: +25, next: 7 },
+          { text: 'Inyectarte en la pierna', impact: +15, next: 7 },
           { text: 'No quieres seguir con esta pesadilla', impact: -5, next: 11}
         ]
       },
@@ -780,7 +780,7 @@ export const scenes = [
         id: 7,
         text: 'Tu cuerpo está en estado crítico. Te han rechazado ya en dos hospitales. Las moscas rondan tus heridas, esta mierda te está comiendo literalmente la piel.',
         choices: [
-          { text: 'Consumir, consumir, consumir', impact: +25, next: 8 },
+          { text: 'Consumir, consumir, consumir', impact: +15, next: 8 },
           { text: 'No quieres morir, quieres internarte', impact: -10, next: 11}
         ]
       },
