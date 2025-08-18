@@ -764,7 +764,7 @@ export const scenes = [
         id: 5,
         text: 'Un médico de urgencias te dice que tiene que amputarte el brazo. Te da igual, solo piensas en la próxima dosis.',
         choices: [
-          { text: 'Escapar del hospital', impact: +15, next: 6 },
+          { text: 'Escapar del hospital', impact: +10, next: 6 },
           { text: 'Aceptar el tratamiento', impact: -5, next: 11}
         ]
       },
@@ -772,7 +772,7 @@ export const scenes = [
         id: 6,
         text: 'Duermes en un callejón, ya no sientes el brazo. Apenas puedes caminar. Eres como la peste negra, nadie te quiere cerca.',
         choices: [
-          { text: 'Inyectarte en la pierna', impact: +15, next: 7 },
+          { text: 'Inyectarte en la pierna', impact: +10, next: 7 },
           { text: 'No quieres seguir con esta pesadilla', impact: -5, next: 11}
         ]
       },

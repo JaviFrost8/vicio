@@ -1,6 +1,9 @@
 import React from 'react'
 import { useGameContext } from '../context/GameContext'
 import { drugsImages } from '../data/drugsImages'
+import { deteriorationData } from '../data/deteriorationData';
+import { getPercentage } from '../utils/getPercentage';
+import { getImageIndex } from '../utils/getImageIndex';
 
 export const ResumenDecisions = () => {
 
@@ -9,33 +12,32 @@ export const ResumenDecisions = () => {
   const imgIndex = getImageIndex(score, drugSelected)
   const imgSrc = drugsImages[drugSelected][imgIndex]
   const imgSano = drugsImages[drugSelected][0]
+  const percentage = getPercentage(score, drugSelected)
 
-  function getImageIndex(score, drugSelected) {
+  const { face, body } = deteriorationData[drugSelected][percentage]
 
-    if (drugSelected === 'Ketamina' || drugSelected === 'GHB') {
-      
-      return score <= 20 ? 0 : 1
-
-    } else {
-      if (score <= 10) return 0
-      if (score <= 30) return 1
-      if (score <= 50) return 2
-      if (score <= 70) return 3
-      return 4
-    }
-  }
+  console.log(score)
 
   return (
     <div className='resumen-container'>
 
-      <h2>Tu nivel de deterioro es el siguiente. {score}</h2>
+      <h1>{drugSelected}</h1>
+      <h2>Tu nivel de deterioro es del {percentage}%</h2>
 
-      <div>
+      <div className='photo-container'>
         <img className='photo-result' src={imgSano} alt='sano' />
-        {score > 20 ? <img className='photo-result' src={imgSrc} alt='deteriorado' /> : ''}
+        {score >= 11 ? <img className='photo-result' src={imgSrc} alt='deteriorado' /> : ''}
+      </div>
+
+      <div className='resume-text-container'>
+        {percentage === 0 ? '' : <h2>Daños causados en cara y cuerpo.</h2>}
+        <div className='resume-text'>
+          {face}
+          {body}
+        </div>
       </div>
       
-      <button onClick={() => reset()}>Empezar de nuevo</button>
+      <button className='btn-drug' onClick={() => reset()}>Empezar de nuevo</button>
     </div>
   )
 }
