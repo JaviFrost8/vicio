@@ -14,7 +14,7 @@ export const BackgroundAudio = () => {
 
   return (
     <div className='audio-container'>
-      <audio ref={audioRef} controls loop style={{ width: '150px', opacity: 0.5, position: 'absolute', bottom: '10px', right: '10px'}}>
+      <audio ref={audioRef} controls autoPlay loop style={{ width: '150px', opacity: 0.5, position: 'absolute', bottom: '10px', right: '10px'}}>
         <source src={audioFile} type='audio/mp3' />
         Your browser does not support the audio element.
       </audio>
