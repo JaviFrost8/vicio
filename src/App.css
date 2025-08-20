@@ -459,8 +459,8 @@ a{
   background-color: var(--second-color);
   width: 100%;
   color: var(--fifth-color);
-  margin: 40px 0 0 0;
-  padding-top: 20px;
+  margin: 40px 0 0;
+  padding: 20px 0 80px 0;
 }
 
 .card-container{
@@ -475,7 +475,6 @@ a{
 
 .card{
   width: 550px;
-  border: 2px solid var(--fourth-color);
   padding: 10px;
   margin: 20px 30px;
   border-radius: 5px;
@@ -520,3 +519,92 @@ a{
   color: var(--second-color)
 }
 
+.tips-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.tips{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px;
+  width: 70%;
+  margin: 110px 0;
+  animation: view 1.5s ease both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.tips i{
+  font-size: 40px;
+  margin-bottom: 7px;
+}
+
+.tip{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tip p{
+  max-width: 300px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.warning-limits-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--second-color);
+}
+
+.warning-limits{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fifth-color);
+  width: 70%;
+}
+
+.warning-limits img{
+  filter: brightness(1);
+  mix-blend-mode: multiply;
+  width: 50%;
+}
+
+.warning-limits-div-text{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  
+  animation: view 1.5s ease both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.warning-limits-div-text h2{
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.warning-limits-div-text span{
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--fourth-color);
+  width: 100%;
+  padding: 35px 0;
+}

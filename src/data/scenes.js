@@ -203,7 +203,7 @@ export const scenes = [
         id: 1,
         text: 'El efecto es inmediato, una euforia brutal. Pero en minutos desaparece y sientes un vacío extraño.',
         choices: [
-          { text: 'Pedir otra calada', impact: +5, next: 2 },
+          { text: 'Pedir otra calada', impact: +10, next: 2 },
           { text: 'Decides parar', impact: +5, next: 9 }
         ]
       },
@@ -236,7 +236,7 @@ export const scenes = [
         text: 'Ha pasado el tiempo. Tu nivel de dependecia es alto. Llevas días sin comer, tienes alucinaciones. Escuchas pasos que no existen.',
         choices: [
           { text: 'Consumes para calmarte', impact: +15, next: 6 },
-          { text: 'Buscar refugio', impact: +10, next: 12 }
+          { text: 'Buscar refugio', impact: -5, next: 12 }
         ]
       },
       {
@@ -313,7 +313,7 @@ export const scenes = [
       },
       {
         id: 3,
-        text: 'Empiezas a olvidarte de cosas. Te cuesta dormir sin GHB. Tienes pequeños apagones de memoria que no puedes explicar.',
+        text: 'Empiezas a olvidarte de cosas. Te cuesta dormir sin sustancia. Tienes pequeños apagones de memoria que no puedes explicar.',
         choices: [
           { text: 'Investigar sobre efectos secundarios', impact: +10, next: 4 },
           { text: 'Restar importancia y seguir consumiendo', impact: +15, next: 4 }
@@ -361,7 +361,7 @@ export const scenes = [
     },
     {
       id: 9,
-      text: 'Hasta aquí llega tu historia con la Ketamina. Tienes daños neurológicos leves. Te cuesta concentrarte. Te cuesta vivir sin la sustancia. Tienes miedo, pero estás enganchado. Espero que tengas suerte y fuerza de voluntad para recuperar tu vida. Va a ser complicado.',
+      text: 'Hasta aquí llega tu historia con el GHB. Tienes daños neurológicos leves. Te cuesta concentrarte. Te cuesta vivir sin la sustancia. Tienes miedo, pero estás enganchado. Espero que tengas suerte y fuerza de voluntad para recuperar tu vida. Va a ser complicado.',
       isFinal: true
     }
     ]
@@ -384,7 +384,7 @@ export const scenes = [
         text: 'Te inyectas por primera vez, sientes una paz profunda, no existen los problemas. El mundo se desvanece y todo parece estar bien por fin.',
         choices: [
           { text: 'Volver a probarla al día siguiente', impact: +5, next: 2 },
-          { text: 'Alejarte, sabes que es peligroso', impact: +5, next: 10}
+          { text: 'Alejarte, sabes que es peligroso', impact: 0, next: 10}
         ]
       },
       {

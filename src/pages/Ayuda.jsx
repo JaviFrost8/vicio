@@ -2,6 +2,9 @@ import React from 'react'
 import manos from '../../public/images/manos.jpg'
 import { Telephones } from '../components/Telephones'
 import { Organitations } from '../components/Organitations'
+import { Tips } from '../components/Tips'
+import { WarningAndLimits } from '../components/WarningAndLimits'
+import { Footer } from '../components/Footer'
 
 export const Ayuda = () => {
 
@@ -16,6 +19,9 @@ export const Ayuda = () => {
       <div className='help-body'>
         <Telephones />
         <Organitations />
+        <Tips />
+        <WarningAndLimits />
+        <Footer />
       </div>
     </div>
   )
