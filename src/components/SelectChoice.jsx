@@ -9,7 +9,7 @@ export const SelectChoice = ({ scene, goToScene, addScore }) => {
   return (
     <div className='btns-decisions-container'>
       {scene.choices?.map((choice, index) => (
-        <button onClick={() => {
+        <button className='btn-option' onClick={() => {
           goToScene(choice.next)
           addScore(choice.impact)
         }} key={index}>{choice.text}</button>

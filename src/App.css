@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,11 +9,11 @@
   --fifth-color: #b91819;
 }
 
-body{
+body {
   background-color: var(--first-color);
 }
 
-nav{
+nav {
   position: fixed;
   display: flex;
   align-items: center;
@@ -25,30 +25,31 @@ nav{
   z-index: 1;
 }
 
-ul{
+ul {
   display: flex;
   list-style: none;
 }
 
-li{
+li {
   font-size: 1.3rem;
   margin: 0 50px;
 }
 
-a{
+a {
   color: var(--second-color);
   text-decoration: none;
 }
 
-.big-container{
+.big-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
 }
 
-.title-container{
+.title-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +59,7 @@ a{
   margin-top: 10rem;
 }
 
-.vicio{
+.vicio {
   font-family: 'Rubik Glitch';
   font-size: 18rem;
   letter-spacing: 1rem;
@@ -68,25 +69,27 @@ a{
   animation: showIt 3s ease;
 }
 
-@keyframes showIt{
-  from{
+@keyframes showIt {
+  from {
     transform: translateY(50px);
     opacity: 0;
 
-  }to{
+  }
+
+  to {
     transform: translateY(0);
     opacity: 1
   }
 }
 
-.text-title{
+.text-title {
   font-family: 'Roboto';
   color: var(--fifth-color);
   font-size: 4rem;
   user-select: none;
 }
 
-.btn{
+.btn {
   font-size: 20px;
   background-color: var(--fifth-color);
   color: var(--first-color);
@@ -98,39 +101,39 @@ a{
   transition: all .2s;
 }
 
-.btn:hover{
+.btn:hover {
   padding: 7px 25px;
   background-color: #ff0000;
 }
 
-.text{
+.text {
   margin-top: 2rem;
   font-size: 1.3rem;
 }
 
 /* PAGINA DEL JUEGO */
 
-.warning{
+.warning {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: rgb(248, 248, 139);
   padding: 40px;
-  margin-top: 200px;
+  margin-top: 0px;
   width: 50%;
 }
 
-.warning h2{
+.warning h2 {
   font-size: 40px;
 }
 
-.warning p{
+.warning p {
   font-size: 25px;
   text-align: center;
 }
 
-.btn-warning{
+.btn-warning {
   margin-top: 30px;
   padding: 7px 15px;
   background-color: var(--thirst-color);
@@ -141,20 +144,21 @@ a{
   transition: all 150ms ease;
 }
 
-.btn-warning:hover{
+.btn-warning:hover {
   background-color: #6e6e6e
 }
 
-.intro-container{
+.intro-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin: 30px auto;
+  flex: 1;
+  margin: 0
 }
 
-.description-container{
+.description-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -164,12 +168,17 @@ a{
   animation: see 2s ease;
 }
 
-@keyframes see{
-  from {opacity: 0}
-  to {opacity: 1}
+@keyframes see {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-.description{
+.description {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +187,7 @@ a{
   width: 70%;
 }
 
-.photo-description{
+.photo-description {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -186,34 +195,34 @@ a{
   width: 40%;
 }
 
-.photo-description img{
+.photo-description img {
   box-shadow: 0 0 20px var(--fifth-color);
   border-radius: 20px;
   transition: all 1s ease;
 }
 
-.photo-description img:hover{
+.photo-description img:hover {
   transform: scale(1.04);
 }
 
-.text-description{
+.text-description {
   width: 60%;
   font-size: 23px;
 }
 
-.drugs-container{
+.drugs-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.destroy-text{
+.destroy-text {
   color: #e20101;
   margin: 15px 0;
 }
 
-.btn-drug{
+.btn-drug {
   background: linear-gradient(145deg, #2d2d2d, #1c1c1c);
   border: none;
   padding: 10px 20px;
@@ -227,22 +236,22 @@ a{
   transition: all 0.2s ease;
 }
 
-.btn-drug:hover{
+.btn-drug:hover {
   transform: scale(1.05);
   background: linear-gradient(145deg, #e20101, #810000);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
-.game-container{
+.game-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: var(--thirst-color);
+  flex: 1;
   width: 100%;
-  min-height: 100vh;
 }
 
-.welcome-drug-container{
+.welcome-drug-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,13 +260,13 @@ a{
   animation: see 1s ease;
 }
 
-.title-drug{
+.title-drug {
   margin: 100px 0 30px 0;
   color: #e20101;
   text-shadow: 1px 1px 2px #1c1c1c;
 }
 
-.intro-drug{
+.intro-drug {
   font-size: 22px;
   color: white;
   width: 600px;
@@ -265,51 +274,57 @@ a{
   text-align: center;
 }
 
-.photo-drug{
+.photo-drug {
   width: 450px;
   margin-bottom: 30px;
   border-radius: 10px;
 }
 
-.decisions-container{
+.decisions-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #6e6e6e;
+  background: radial-gradient(ellipse at top, #6e6e6e, transparent),radial-gradient(ellipse at bottom, #b1b0b0, transparent);
+  border: 2px solid #e8e8e7;
   padding: 25px 45px;
   border-radius: 10px;
   width: 60%;
   margin-top: 200px;
 }
 
-.decisions-container h3{
+.decisions-container h3 {
   font-size: 24px;
   color: white;
   text-align: center;
 }
 
-.btns-decisions-container{
+.btns-decisions-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 25px 0;
   margin-top: 50px;
+  width: 100%;
 }
 
-.btns-decisions-container button{
+.btns-decisions-container button {
   font-size: 20px;
   padding: 15px 25px;
   margin: 0 8px;
   border-radius: 5px;
+  width: 50%;
   border: none;
   cursor: pointer;
   transition: all 250ms ease;
 }
 
-.btns-decisions-container button:hover{
+.btns-decisions-container button:hover {
   background-color: var(--thirst-color);
   color: #eee;
 }
 
-.finalBtn{
+.finalBtn {
   background-color: var(--thirst-color);
   color: white;
   font-weight: bold;
@@ -321,11 +336,11 @@ a{
   transition: 0.3s ease;
 }
 
-.finalBtn:hover{
+.finalBtn:hover {
   background-color: var(--fourth-color) !important
 }
 
-.resumen-container{
+.resumen-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,35 +348,37 @@ a{
   width: 60%;
   color: #eee;
   margin: 110px 0;
-  
+
 }
 
-.resume-text-container{
+.resume-text-container {
   text-align: center;
   margin: 15px 0;
 }
 
-.resume-text-container h2{
+.resume-text-container h2 {
   margin: 10px 0;
 }
 
-.resume-text{
+.resume-text {
   font-size: 18px;
 }
 
-.photo-result{
+.photo-result {
   width: 300px;
   margin: 20px 10px;
   border-radius: 20px;
   transition: all 1s ease;
 }
 
-.help-container{
+/* AQUI EMPIEZA LA SECCIÓN DE AYUDA */
+
+.help-container {
   background-color: var(--thirst-color);
   margin-top: 100px;
 }
 
-.front-page{
+.front-page {
   position: relative;
   background-image: url('../public/images/manos.jpg');
   background-repeat: no-repeat;
@@ -371,8 +388,8 @@ a{
   height: 100vh;
 }
 
-.text-front-page{
-  position: absolute; 
+.text-front-page {
+  position: absolute;
   line-height: 25px;
   font-size: 40px;
   font-family: 'Alumni Sans Pinstripe';
@@ -384,16 +401,18 @@ a{
 }
 
 @keyframes lateral {
-  from{
+  from {
     opacity: 0;
     transform: translateX(-50px);
-  }to{
+  }
+
+  to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-.help-body{
+.help-body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -403,12 +422,12 @@ a{
   background-color: var(--fourth-color)
 }
 
-.help-body h1{
+.help-body h1 {
   position: relative;
   margin: 70px 0 50px;
 }
 
-.help-body h1::after{
+.help-body h1::after {
   content: '';
   position: absolute;
   top: 40px;
@@ -418,12 +437,12 @@ a{
   background-color: var(--second-color);
 }
 
-.tlfns-container{
+.tlfns-container {
   display: flex;
   margin-bottom: 60px;
 }
 
-.tlfn-container{
+.tlfn-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -434,7 +453,7 @@ a{
   animation-range: entry 20% cover 40%;
 }
 
-.tlfn{
+.tlfn {
   font-size: 20px;
   margin: 10px 0;
 }
@@ -445,13 +464,13 @@ a{
     transform: translateX(-200px);
   }
 
-  to{
+  to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-.organitations-container{
+.organitations-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -463,36 +482,36 @@ a{
   padding: 20px 0 80px 0;
 }
 
-.card-container{
+.card-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 85%;
-  animation: view 1.5s ease both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 40%;
 }
 
-.card{
+.card {
   width: 550px;
   padding: 10px;
   margin: 20px 30px;
   border-radius: 5px;
   min-height: 250px;
+  animation: view 1.5s ease both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
 }
 
-.card img{
+.card img {
   width: 200px;
 }
 
-.card-inner{
+.card-inner {
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: var(--thirst-color)
 }
 
-.card .info{
+.card .info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -500,26 +519,26 @@ a{
   width: 50%
 }
 
-.info-title{
+.info-title {
   margin: 7px 0;
   color: var(--fifth-color)
 }
 
-.info p{
+.info p {
   text-align: center;
 }
 
-.info-tlfn{
+.info-tlfn {
   margin: 7px 0;
   color: var(--fifth-color)
 }
 
-.info a{
+.info a {
   text-decoration: none;
   color: var(--second-color)
 }
 
-.tips-container{
+.tips-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -528,7 +547,7 @@ a{
   padding-bottom: 80px;
 }
 
-.tips{
+.tips {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 35px;
@@ -539,25 +558,25 @@ a{
   animation-range: entry 20% cover 40%;
 }
 
-.tips i{
+.tips i {
   font-size: 40px;
   margin-bottom: 7px;
 }
 
-.tip{
+.tip {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.tip p{
+.tip p {
   max-width: 300px;
   margin-top: 10px;
   text-align: center;
 }
 
-.warning-limits-container{
+.warning-limits-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -565,7 +584,7 @@ a{
   background-color: var(--second-color);
 }
 
-.warning-limits{
+.warning-limits {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -573,33 +592,33 @@ a{
   width: 70%;
 }
 
-.warning-limits img{
+.warning-limits img {
   filter: brightness(1);
   mix-blend-mode: multiply;
   width: 50%;
 }
 
-.warning-limits-div-text{
+.warning-limits-div-text {
   display: flex;
   flex-direction: column;
   width: 50%;
-  
+
   animation: view 1.5s ease both;
   animation-timeline: view();
   animation-range: entry 20% cover 40%;
 }
 
-.warning-limits-div-text h2{
+.warning-limits-div-text h2 {
   margin-bottom: 10px;
   font-size: 35px;
 }
 
-.warning-limits-div-text span{
+.warning-limits-div-text span {
   margin: 5px 0;
   font-size: 18px;
 }
 
-.footer-container{
+.footer-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,4 +626,303 @@ a{
   background-color: var(--fourth-color);
   width: 100%;
   padding: 35px 0;
+}
+
+/* AQUÍ EMPIEZA EL CSS PARA HACERLO RESPONSIVE EN TABLETS */
+
+@media(max-width: 768px) {
+
+  .title-container .vicio {
+    font-size: 170px;
+  }
+
+  .text-title {
+    font-size: 40px;
+  }
+
+  .warning {
+    width: 70%;
+  }
+
+  .description-container {
+    width: 100%;
+  }
+
+  .description {
+    margin: 100px 50px 50px 50px;
+  }
+
+  .photo-description img {
+    width: 200px !important;
+  }
+
+  .text-description {
+    font-size: 17px;
+  }
+
+  .destroy-text {
+    line-height: 10px;
+    font-size: 25px;
+  }
+
+  .welcome-drug-container .photo-drug{
+    width: 300px;
+  }
+
+  .btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .audio-container{
+    position: relative;
+    width: 100%;
+  }
+
+  .audio-container audio {
+    opacity: 0.1 !important;
+    bottom: 0px !important;
+    right: 5px !important;
+  }
+
+  .decisions-container {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .btns-decisions-container {
+    display: flex;
+  }
+
+  .decisions-container button {
+    font-size: 18px;
+    background-color: var(--second-color);
+    color: var(--thirst-color);
+    transition: all 300ms ease;
+  }
+
+  .decisions-container button:hover {
+    background-color: var(--second-color);
+    color: var(--thirst-color)
+  }
+
+  .finalBtn {
+    background-color: var(--fourth-color) !important;
+    color: white !important;
+  }
+
+  .resumen-container {
+    margin: 90px 0;
+  }
+
+  .photo-container img {
+    width: 180px;
+  }
+
+  .front-page {
+    position: relative;
+    background-image: url('../public/images/manos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -800px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .text-front-page {
+    position: absolute;
+    line-height: 20px;
+    font-size: 25px;
+    font-family: 'Alumni Sans Pinstripe';
+    top: 350px;
+    text-shadow: 1px 1px 2px black;
+    left: 60px;
+    color: var(--first-color);
+    animation: lateral 1.5s ease;
+  }
+
+  .tlfns-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .warning-limits{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .warning-limits-div-text{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+}
+
+/* AQUÍ EMPIEZA EL CSS PARA HACERLO RESPONSIVE EN MÓVILES*/
+
+@media (max-width: 480px){
+
+  .intro-container{
+    height: 100%;
+  }
+
+  .title-container .vicio{
+    font-size: 120px;
+  }
+
+  .text-title{
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .warning h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .warning p{
+    font-size: 18px;
+  }
+
+  .description-container{
+    padding-bottom: 70px;
+  }
+
+  .description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .photo-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .text-description{
+    text-align: center;
+  }
+
+  .drugs-container h1{
+    margin-bottom: 30px;
+  }
+
+  .welcome-drug-container{
+    width: 100%;
+  }
+
+  .intro-drug{
+    width: 80%;
+  }
+
+  .resumen-container{
+    width: 90%;
+  }
+
+  .photo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .photo-container img{
+    width: 40%;
+  }
+
+  .front-page {
+    position: relative;
+    background-image: url('../public/images/manos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -900px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .text-front-page {
+    position: absolute;
+    line-height: 15px;
+    font-size: 17px;
+    font-family: 'Alumni Sans Pinstripe';
+    top: 400px;
+    text-shadow: 1px 1px 2px black;
+    left: 10px;
+    color: var(--first-color);
+    animation: lateral 1.5s ease;
+  }
+
+  .tlfns-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .tlfn-container{
+    text-align: center;
+  }
+
+  .organitations-container{
+    width: 100%;
+  }
+
+  .card{
+    width: 90%;
+  }
+
+  .card img{
+    width: 160px;
+    margin-right: 5px;
+  }
+
+  .tips-container{
+    width: 100%;
+  }
+
+  .tips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .warning-limits-div-text{
+    width: 100%;
+  }
+
+  .footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+  }
+
+  .btn-option{
+    font-size: 16px !important;
+    min-height: 170px;
+  }
+
 }
