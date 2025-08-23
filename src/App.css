@@ -799,8 +799,12 @@ a {
     font-size: 22px;
   }
 
+  .warning {
+    width: 95%;
+  }
+
   .warning h2 {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
   }
 
@@ -920,7 +924,7 @@ a {
   }
 
   .help-body h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .tlfns-container {
@@ -967,12 +971,20 @@ a {
   }
 
   .tips-container {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 
   .tips {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .tip p{
+    width: 150px;
   }
 
   .warning-limits-div-text {
