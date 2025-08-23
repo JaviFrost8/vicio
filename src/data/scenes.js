@@ -1,4 +1,4 @@
-import alcohol from '/images/drogas/alcohol.jpg'
+import alcohol from '../../public/images/drogas/alcohol.jpg'
 
 export const scenes = [
   {

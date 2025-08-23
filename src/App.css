@@ -789,6 +789,10 @@ a {
     height: 100%;
   }
 
+  .title-container{
+    margin-top: 0px !important;
+  }
+
   .title-container .vicio {
     text-align: center;
     font-size: 80px;
