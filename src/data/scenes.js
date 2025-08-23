@@ -1,11 +1,11 @@
 import alcohol from '../../public/images/drogas/alcohol.jpg'
 import cocaina from '../../public/images/drogas/cocaina.jpg'
 import crack from '../../public/images/drogas/crack.jpg'
-import heroina from '../../public/images/drogas/heroina.jpg'
+import heroina from '../../public/images/drogas/heroina.webp'
 import GHB from '../../public/images/drogas/GHB.jpg'
 import fentanilo from '../../public/images/drogas/fentanilo.jpg'
-import ketamina from '../../public/images/drogas/ketamina.jpg'
-import metanfetamina from '../../public/images/drogas/metanfetamina.jpg'
+import ketamina from '../../public/images/drogas/ketamina.webp'
+import metanfetamina from '../../public/images/drogas/metanfetamina.webp'
 import krokodil from '../../public/images/drogas/krokodil.jpg'
 
 export const scenes = [
