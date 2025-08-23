@@ -1,7 +1,9 @@
+import alcohol from '/images/drogas/alcohol.jpg'
+
 export const scenes = [
   {
     drug: 'Alcohol',
-    photo: '/images/drogas/alcohol.jpg',
+    photo: alcohol,
     intro: 'Una copa para celebrar. Risas, música, amigos. Te sientes libre, valiente, invencible. Todo fluye, todo brilla un poco más. Por un momento el mundo es perfecto.',
     scenesArray: [
       {
