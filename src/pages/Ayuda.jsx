@@ -12,7 +12,7 @@ export const Ayuda = () => {
     <div>
       <div className='front-page'>
         <div className='text-front-page'>
-          <h2>Si estás luchando con el consumo de drogas, no estás solo.</h2><br></br>
+          <h2 className='lonely'>Si estás luchando con el consumo de drogas, no estás solo.</h2><br></br>
           <h2>Pedir ayuda es un paso valiente y posible.</h2>
         </div>
       </div>

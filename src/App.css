@@ -285,7 +285,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: radial-gradient(ellipse at top, #6e6e6e, transparent),radial-gradient(ellipse at bottom, #b1b0b0, transparent);
+  background: radial-gradient(ellipse at top, #6e6e6e, transparent), radial-gradient(ellipse at bottom, #b1b0b0, transparent);
   border: 2px solid #e8e8e7;
   padding: 25px 45px;
   border-radius: 10px;
@@ -652,8 +652,13 @@ a {
     margin: 100px 50px 50px 50px;
   }
 
+  .photo-container{
+    display: flex;
+    width: 100%;
+  }
+
   .photo-description img {
-    width: 200px !important;
+    width: 50%;
   }
 
   .text-description {
@@ -665,7 +670,7 @@ a {
     font-size: 25px;
   }
 
-  .welcome-drug-container .photo-drug{
+  .welcome-drug-container .photo-drug {
     width: 300px;
   }
 
@@ -677,7 +682,7 @@ a {
     gap: 10px;
   }
 
-  .audio-container{
+  .audio-container {
     position: relative;
     width: 100%;
   }
@@ -735,7 +740,7 @@ a {
   .text-front-page {
     position: absolute;
     line-height: 20px;
-    font-size: 25px;
+    font-size: 22px;
     font-family: 'Alumni Sans Pinstripe';
     top: 350px;
     text-shadow: 1px 1px 2px black;
@@ -744,21 +749,21 @@ a {
     animation: lateral 1.5s ease;
   }
 
-  .tlfns-container{
+  .tlfns-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
-  .card-container{
+  .card-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
-  .warning-limits{
+  .warning-limits {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -767,7 +772,7 @@ a {
     padding-bottom: 30px;
   }
 
-  .warning-limits-div-text{
+  .warning-limits-div-text {
     width: 90%;
     text-align: center;
     padding: 10px;
@@ -778,43 +783,44 @@ a {
 
 /* AQUÍ EMPIEZA EL CSS PARA HACERLO RESPONSIVE EN MÓVILES*/
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 
-  .intro-container{
+  .intro-container {
     height: 100%;
   }
 
-  .title-container .vicio{
-    font-size: 120px;
-  }
-
-  .text-title{
+  .title-container .vicio {
     text-align: center;
-    font-size: 25px;
+    font-size: 80px;
   }
 
-  .warning h2{
-    font-size: 25px;
+  .text-title {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .warning h2 {
+    font-size: 20px;
     margin-bottom: 10px;
   }
 
-  .warning p{
+  .warning p {
     font-size: 18px;
   }
 
-  .description-container{
+  .description-container {
     padding-bottom: 70px;
   }
 
-  .description{
+  .description {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
   }
-  
-  .photo-description{
+
+  .photo-description {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -823,34 +829,67 @@ a {
     width: 100%;
   }
 
-  .text-description{
-    text-align: center;
-  }
-
-  .drugs-container h1{
-    margin-bottom: 30px;
-  }
-
-  .welcome-drug-container{
-    width: 100%;
-  }
-
-  .intro-drug{
-    width: 80%;
-  }
-
-  .resumen-container{
+  .btns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 90%;
   }
 
-  .photo-container{
+  .btn-drug {
+    background: linear-gradient(145deg, #2d2d2d, #1c1c1c);
+    border: none;
+    padding: 7px 14px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .text-description {
+    text-align: center;
+  }
+
+  .drugs-container h1 {
+    margin-bottom: 30px;
+  }
+
+  .welcome-drug-container {
+    width: 100%;
+  }
+
+  .intro-drug {
+    width: 80%;
+  }
+
+  .decisions-container {
+    width: 95%;
+  }
+
+  .btns-decisions-container {
+    width: 100%;
+  }
+
+
+  .resumen-container {
+    width: 95%;
+  }
+
+  .resumen-container h2{
+    text-align: center;
+  }
+
+  .photo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
 
-  .photo-container img{
+  .photo-container img {
     width: 40%;
   }
 
@@ -867,7 +906,7 @@ a {
   .text-front-page {
     position: absolute;
     line-height: 15px;
-    font-size: 17px;
+    font-size: 20px;
     font-family: 'Alumni Sans Pinstripe';
     top: 400px;
     text-shadow: 1px 1px 2px black;
@@ -876,44 +915,67 @@ a {
     animation: lateral 1.5s ease;
   }
 
-  .tlfns-container{
+  .text-front-page .lonely{
+    line-height: 33px;
+  }
+
+  .help-body h1 {
+    font-size: 28px;
+  }
+
+  .tlfns-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
-  .tlfn-container{
+  .tlfn-container {
     text-align: center;
   }
 
-  .organitations-container{
+  .organitations-container {
     width: 100%;
   }
 
-  .card{
+  .card {
     width: 90%;
   }
 
-  .card img{
+  .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-inner img {
+    margin-bottom: 7px;
+  }
+
+  .card-inner .info-title {
+    margin-bottom: 7px;
+  }
+
+  .card img {
     width: 160px;
     margin-right: 5px;
   }
 
-  .tips-container{
+  .tips-container {
     width: 100%;
   }
 
-  .tips{
+  .tips {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .warning-limits-div-text{
+  .warning-limits-div-text {
     width: 100%;
   }
 
-  .footer-container{
+  .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -922,7 +984,7 @@ a {
     width: 95%;
   }
 
-  .btn-option{
+  .btn-option {
     font-size: 16px !important;
     min-height: 170px;
   }
