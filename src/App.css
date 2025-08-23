@@ -920,7 +920,7 @@ a {
   }
 
   .help-body h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .tlfns-container {
@@ -955,6 +955,10 @@ a {
 
   .card-inner .info-title {
     margin-bottom: 7px;
+  }
+
+  .card-inner .info{
+    width: 90%;
   }
 
   .card img {
